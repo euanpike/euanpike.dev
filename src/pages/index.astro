@@ -2,7 +2,6 @@
 import BaseLayout from '../layouts/BaseLayout.astro'
 import BentoGrid  from '../components/BentoGrid.astro'
 import Card       from '../components/Card.astro'
-import '../styles/global.css'
 
 const pageTitle = "Euan Pike"
 ---
@@ -10,12 +9,13 @@ const pageTitle = "Euan Pike"
 <BaseLayout pageTitle={pageTitle}>
   <BentoGrid>
       <Card colSpan="md:col-span-3" rowSpan="md:row-span-1" class="p-8 justify-between">
-        <h1 class="font-mono text-4xl font-bold text-white tracking-tighter">
-          Hello, I'm Euan.
-        </h1>
-        <p class="font-sans text-neutral-400 max-w-md mt-4">
-          Embedded Software Engineer.
-        </p>
+        <div class="w-f">
+          <h1 class="font-mono text-4xl font-bold text-white tracking-tighter">
+              Hello, I'm Euan.
+            </h1>
+          <p class="font-sans text-neutral-400 mt-4">
+            I am an Embedded Systems Software Engineer by trade.
+        </div>
       </Card>
     </BentoGrid>
 </BaseLayout>
