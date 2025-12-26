@@ -3,3 +3,12 @@
 @theme {
   --font-mono: 'Roboto Mono Variable', monospace
 }
+
+html {
+  background-color: #23232b;
+}
+
+.border-line {
+  --tw-border-opacity: 1;
+  border-color: #EAE0CF;
+}
