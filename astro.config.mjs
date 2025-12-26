@@ -11,5 +11,10 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  integrations: [react(), mdx()]
+  integrations: [react(), mdx()],
+  redirects: {
+    '/about': '/under-construction',
+    '/blog': '/under-construction',
+    '/projects': '/under-construction'
+  }
 });
