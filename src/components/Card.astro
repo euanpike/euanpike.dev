@@ -1,0 +1,39 @@
+---
+interface Props {
+  title?:   string;
+  subtext?: string;
+  href?:    string;
+  colSpan?: string;
+  rowSpan?: string;
+  class?:   string;
+}
+
+const { 
+  title, 
+  subtext, 
+  href, 
+  colSpan = "col-span-1", 
+  rowSpan = "row-span-1",
+  class: className 
+} = Astro.props;
+
+const Tag = href ? "a" : "div";
+---
+
+<Tag 
+  href={href}
+  class:list={[
+    "border border-neutral-800 bg-neutral-900 p-6 flex flex-col transition-colors",
+    colSpan,
+    rowSpan,
+    href && "hover:bg-neutral-800 cursor-pointer group",
+    className
+  ]}>
+  {subtext && <h3 class="font-mono text-sm text-neutral-500 mb-2">{subtext}</h3>}
+  {title && (
+    <span class="text-white text-xl font-bold group-hover:underline decoration-blue-500 underline-offset-4">
+      {title}
+    </span>
+  )}
+  <slot />
+</Tag>
